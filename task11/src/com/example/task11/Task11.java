@@ -5,12 +5,11 @@ public class Task11 {
     public static float benefit(float sum, float percent) {
 
         // TODO исправьте функцию, чтобы избежать накопления ошибки
-
-        // Считаем проценты за год
-        for (int i = 1; i <= 12; i++) {
-            sum += sum * percent;
+        float res = 0;
+        for (int i = 0; i < 12; i++) {
+           res = (float) (sum * Math.pow(1.0 + percent, 12));
         }
-        return sum;
+        return res;
     }
 
     public static void main(String[] args) {

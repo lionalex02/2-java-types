@@ -4,18 +4,22 @@ public class Task05 {
 
     public static String solution(int x) {
 
-        // TODO напишите здесь свою корректную реализацию этого метода, вместо сеществующей
-
-        return "FALSE";
+        String str = Integer.toString(x);
+        for (char c : str.toCharArray()){
+            if(c % 2 != 0) {
+                return "FALSE";
+            }
+        }
+        return "TRUE";
     }
 
     public static void main(String[] args) {
         // Здесь вы можете вручную протестировать ваше решение, вызывая реализуемый метод и смотря результат
         // например вот так:
-        /*
-        String result = solution(1234);
+
+        String result = solution(12345);
         System.out.println(result);
-        */
+
     }
 
 }
